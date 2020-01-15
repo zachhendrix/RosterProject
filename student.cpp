@@ -7,7 +7,7 @@ using namespace std;
 
 
 class Student {
-private:
+public:
 	//Variables declared in the Student class
 	string studentID;
 	string firstName;
@@ -16,7 +16,12 @@ private:
 	int age;
 	int numDaysToComplete[1];
 
-public:
+
+	Student(string SID, string SFN, string SLN, string SEM, int SAGE)
+	{
+
+	}
+
 	string getSID()
 	{
 		return studentID;
@@ -26,6 +31,47 @@ public:
 	{
 		studentID = SID;
 	}
+
+	string getFN()
+	{
+		return firstName;
+	}
+
+	string setFN(string SFN)
+	{
+		firstName = SFN;
+	}
+
+	string getLN()
+	{
+		return lastName;
+	}
+
+	string setLN(string SLN)
+	{
+		lastName = SLN;
+	}
+
+	string getEM()
+	{
+		return emailAddress;
+	}
+
+	string setEM(string SEM)
+	{
+		emailAddress = SEM;
+	}
+
+	int getAge()
+	{
+		return age;
+	}
+
+	int setAge(int SAGE)
+	{
+		age = SAGE;
+	}
+
 
 	//Degree type is populated in subclasses only.
 	DegreeClass::DegreeType Degree;
