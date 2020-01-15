@@ -71,8 +71,20 @@ public:
 	{
 		age = SAGE;
 	}
+	
+	
+
+	//TO FIX: Getter Setter for numDaysToComplete isnt working for some reason.
+	//TO FIX: Where and how do I put the getter and setter for the Degree?
+	
+	void print();
+
+	~Student()
+	{
+
+	}
 
 
-	//Degree type is populated in subclasses only.
+	//Degree type is populated in subclasses only
 	DegreeClass::DegreeType Degree;
 };
