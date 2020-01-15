@@ -8,9 +8,7 @@ public:
 
 	enum DegreeType
 	{
-		SECURITY,
-		NETWORKING,
-		SOFTWARE
+		SECURITY, NETWORKING, SOFTWARE
 	};
 };
 

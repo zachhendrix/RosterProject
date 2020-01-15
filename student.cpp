@@ -6,15 +6,26 @@ using namespace std;
 
 
 
-class Student
-{
+class Student {
+private:
 	//Variables declared in the Student class
-	int studentID;
+	string studentID;
 	string firstName;
 	string lastName;
 	string emailAddress;
 	int age;
 	int numDaysToComplete[1];
+
+public:
+	string getSID()
+	{
+		return studentID;
+	}
+
+	string setSID(string SID)
+	{
+		studentID = SID;
+	}
 
 	//Degree type is populated in subclasses only.
 	DegreeClass::DegreeType Degree;
