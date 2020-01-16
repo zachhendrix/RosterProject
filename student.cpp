@@ -1,90 +1,85 @@
 #include <iostream>
-#include "student.h"
-#include "degree.h"
+#include "Student.h"
+#include "Degree.h"
+#include <string>
 
 using namespace std;
 
+Student::Student()
+{
+
+}
+
+Student::Student(string SID, string SFN, string SLN, string SEM, int SAGE, int* nmDays)
+{
+	studentID = SID;
+	firstName = SFN;
+	lastName = SLN;
+	emailAddress = SEM;
+	age = SAGE;
 
 
-class Student {
-public:
-	//Variables declared in the Student class
-	string studentID;
-	string firstName;
-	string lastName;
-	string emailAddress;
-	int age;
-	int numDaysToComplete[1];
+}
 
-
-	Student(string SID, string SFN, string SLN, string SEM, int SAGE)
-	{
-
-	}
-
-	string getSID()
+	string Student::getSID()
 	{
 		return studentID;
 	}
 
-	string setSID(string SID)
+	void Student::setSID(string SID)
 	{
 		studentID = SID;
 	}
 
-	string getFN()
+	string Student::getFN()
 	{
 		return firstName;
 	}
 
-	string setFN(string SFN)
+	void Student::setFN(string SFN)
 	{
 		firstName = SFN;
 	}
 
-	string getLN()
+	string  Student::getLN()
 	{
 		return lastName;
 	}
 
-	string setLN(string SLN)
+	void  Student::setLN(string SLN)
 	{
 		lastName = SLN;
 	}
 
-	string getEM()
+	string  Student::getEM()
 	{
 		return emailAddress;
 	}
 
-	string setEM(string SEM)
+	void  Student::setEM(string SEM)
 	{
 		emailAddress = SEM;
 	}
 
-	int getAge()
+	int  Student::getAge()
 	{
 		return age;
 	}
 
-	int setAge(int SAGE)
+	void  Student::setAge(int SAGE)
 	{
 		age = SAGE;
 	}
-	
-	
 
-	//TO FIX: Getter Setter for numDaysToComplete isnt working for some reason.
-	//TO FIX: Where and how do I put the getter and setter for the Degree?
-	
-	void print();
-
-	~Student()
+	//Variable numDaysToComplete does not work after return like the rest of the variables?
+	int Student::getNumDaysToComplete()
 	{
-
+		return 0;
 	}
 
+	void Student::SetNumDaysToComplete(int daylength1, int daylength2, int daylength3)
+	{
 
-	//Degree type is populated in subclasses only
-	DegreeClass::DegreeType Degree;
-};
+
+	}
+	
