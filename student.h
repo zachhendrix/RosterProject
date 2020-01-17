@@ -9,6 +9,7 @@ using namespace std;
 
 class Student
 {
+
 public:
 
 
@@ -31,8 +32,6 @@ public:
 	void setEM(string emailAddress);
 	void setAge(int age);
 	void SetNumDaysToComplete(int daylength1, int daylength2, int daylength3);
-
-
 
 	~Student();
 
