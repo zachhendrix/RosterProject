@@ -7,11 +7,19 @@
 
 using namespace std;
 
+
 class Student
 {
-
 public:
+	string getSID();
+	string getFN();
+	string getLN();
+	string getEMA();
+	int getAge();
+	int *daysinCourse();
 
+
+	void setSID(int);
 
 private:
 	string studentID;
@@ -19,10 +27,9 @@ private:
 	string lastName;
 	string emailAddress;
 	int age;
-	int numDaysToComplete[3];
-	string degree;
+	int daysInCourse[3];
+
+
 
 };
-
-
 #endif
