@@ -5,11 +5,7 @@ using namespace std;
 class DegreeClass
 {
 
-public:
 
-	enum DegreeType {SECURITY, NETWORKING, SOFTWARE};
 
 };
-
-
 #pragma once

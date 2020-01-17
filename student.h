@@ -13,28 +13,6 @@ class Student
 public:
 
 
-	Student();
-
-	Student(string, string, string, string, int, int*);
-
-	string getSID();
-	string getFN();
-	string getLN();
-	string getEM();
-	int getAge();
-	int *getNumDaysToComplete();
-
-
-
-	void setSID(string studentID);
-	void setFN(string firstName);
-	void setLN(string lastName);
-	void setEM(string emailAddress);
-	void setAge(int age);
-	void SetNumDaysToComplete(int daylength1, int daylength2, int daylength3);
-
-	~Student();
-
 private:
 	string studentID;
 	string firstName;
