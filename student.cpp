@@ -83,7 +83,7 @@ void Student::setDegreeType(degree DT)
 	degreeType = DT;
 }
 
-Student::Student(string SID, string FN, string LN, string EMA, int SA, int DIC[3], degree DT)
+Student::Student(string SID, string FN, string LN, string EMA, int SA, int* DIC, degree DT)
 {
 	setSID(SID);
 	setFN(FN);
@@ -97,6 +97,26 @@ Student::Student(string SID, string FN, string LN, string EMA, int SA, int DIC[3
 void Student::print()
 {
 
+	int* daysInCourse = getDIC();
+
+	cout << getSID() << "\t";
+	cout << "First Name: " << getFN() << endl;
+	cout << "Last Name: " << getLN() << endl;
+	cout << "Email:" << getEMA() << endl;
+	cout << "Age: " << getSA() << endl;
+	cout << "daysInCourse: {" << daysInCourse[0] << "," << daysInCourse[1] << "," << daysInCourse[2] << "}" << endl;
+
+	cout << "Degree Program: ";
+	switch (getDegreeProgram()) 
+	{
+	case 0: cout << "Security";
+		break;
+	case 1: cout << "Networking";
+		break;
+	case 2: cout << "Software";
+		break;
+	}
+	cout << "\n";
 }
 
 Student::~Student()

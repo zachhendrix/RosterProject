@@ -10,6 +10,8 @@ using namespace std;
 
 class Student
 {
+
+
 public:
 	string getSID();
 	string getFN();
