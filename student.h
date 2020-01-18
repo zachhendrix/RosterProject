@@ -15,11 +15,26 @@ public:
 	string getFN();
 	string getLN();
 	string getEMA();
-	int getAge();
-	int *daysinCourse();
+	int getSA();
+	int *getDIC();
+	degree getDegreeType();
 
+	void setSID(string);
+	void setFN(string);
+	void setLN(string);
+	void setEMA(string);
+	void setSA(int);
+	void setDIC(int[3]);
+	void setDegreeType(degree);
 
-	void setSID(int);
+	Student(string, string, string, string, int, int*, degree);
+	
+	virtual void print();
+
+	~Student();
+
+	virtual degree getDegreeProgram();
+
 
 private:
 	string studentID;
@@ -28,8 +43,6 @@ private:
 	string emailAddress;
 	int age;
 	int daysInCourse[3];
-
-
-
+	degree degreeType;
 };
 #endif
