@@ -7,12 +7,13 @@
 
 using namespace std;
 
-
+//declaration of the student class 
 class Student
 {
 
-
+//
 public:
+	//Declarations of getters or accessors for section D2.A 
 	string getSID();
 	string getFN();
 	string getLN();
@@ -21,6 +22,8 @@ public:
 	int *getDIC();
 	degree getDegreeType();
 
+
+	//Declarations of setters or mutators for section D2.B
 	void setSID(string);
 	void setFN(string);
 	void setLN(string);
@@ -29,15 +32,23 @@ public:
 	void setDIC(int[3]);
 	void setDegreeType(degree);
 
+
+	//Declaration of the constructor that uses all elements of the table for section D2.C
 	Student(string, string, string, string, int, int*, degree);
 	
+
+	//Declaration of the virtual print to "print" specific student data for section D2.D
 	virtual void print();
 
+	//Declaration of the deconstructor from section D2.E
 	~Student();
 
+
+	//Declaration of the virtual "getDegreeProgram" from section D2.F 
 	virtual degree getDegreeProgram();
 
 
+//declaration of the variables in section D1
 private:
 	string studentID;
 	string firstName;

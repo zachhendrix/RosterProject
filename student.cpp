@@ -8,7 +8,7 @@ using namespace std;
 
 
 
-
+//Definitions of getters or accessors from section D2.A
 string Student::getSID()
 {
 	return studentID;
@@ -46,7 +46,7 @@ degree Student::getDegreeType()
 
 
 
-
+//Definitions of setters for mutators from section D2.A
 void Student::setSID(string SID)
 {
 	studentID = SID;
@@ -83,6 +83,7 @@ void Student::setDegreeType(degree DT)
 	degreeType = DT;
 }
 
+//Definition of the constructor that uses all elements of the table for section D2.C
 Student::Student(string SID, string FN, string LN, string EMA, int SA, int* DIC, degree DT)
 {
 	setSID(SID);
@@ -94,16 +95,18 @@ Student::Student(string SID, string FN, string LN, string EMA, int SA, int* DIC,
 	setDegreeType(DT);
 }
 
+
+//Definition of the virtual print to "print" specific student data for section D2.D
 void Student::print()
 {
 
 	int* daysInCourse = getDIC();
 
 	cout << getSID() << "\t";
-	cout << "First Name: " << getFN() << endl;
-	cout << "Last Name: " << getLN() << endl;
-	cout << "Email:" << getEMA() << endl;
-	cout << "Age: " << getSA() << endl;
+	cout << "First Name: " << getFN() << "\t";
+	cout << "Last Name: " << getLN() << "\t";
+	cout << "Email:" << getEMA() << "\t";
+	cout << "Age: " << getSA() << "\t";
 	cout << "daysInCourse: {" << daysInCourse[0] << "," << daysInCourse[1] << "," << daysInCourse[2] << "}" << endl;
 
 	cout << "Degree Program: ";
@@ -119,10 +122,13 @@ void Student::print()
 	cout << "\n";
 }
 
+//Definition of the deconstructor from section D2.E
 Student::~Student()
 {
+
 }
 
+//Definition of the virtual "getDegreeProgram" from section D2.F 
 degree Student::getDegreeProgram()
 {
 	return SECURITY;

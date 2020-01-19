@@ -2,6 +2,7 @@
 #include "student.h"
 
 
+//Declaration of the Network Student class
 class NetworkStudent : public Student 
 {
 

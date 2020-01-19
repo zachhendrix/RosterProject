@@ -1,7 +1,7 @@
 #pragma once
 #include "student.h"
 
-
+//Declaration of the Security student class
 class SecurityStudent : public Student
 {
 
