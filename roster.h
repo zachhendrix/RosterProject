@@ -16,6 +16,6 @@ public:
 	void remove(string SID);
 	~Roster();
 
-	//Array of pointers 
+	//Array of pointers to hold the data provided in the studentData table for section E1
 	Student* classRosterArray[5] = { nullptr, nullptr, nullptr, nullptr, nullptr };
 };
