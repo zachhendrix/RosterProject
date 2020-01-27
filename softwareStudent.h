@@ -6,11 +6,11 @@ class SoftwareStudent : public Student
 {
 
 public:
-	virtual degree getDegreeProgram();
+	virtual Degree getDegreeProgram();
 	using Student::Student;
 
 private:
-	degree degreeType = SOFTWARE;
+	Degree degreeType = SOFTWARE;
 
 
 };

@@ -39,9 +39,9 @@ int* Student::getDIC()
 	return daysInCourse;
 }
 
-degree Student::getDegreeType()
+Degree Student::getDegreeType()
 {
-	return degree();
+	return Degree();
 }
 
 
@@ -78,13 +78,13 @@ void Student::setDIC(int *DIC)
 		daysInCourse[i] = DIC[i];
 	}
 }
-void Student::setDegreeType(degree DT)
+void Student::setDegreeType(Degree DT)
 {
 	degreeType = DT;
 }
 
 //Definition of the constructor that uses all elements of the table for section D2.C
-Student::Student(string SID, string FN, string LN, string EMA, int SA, int* DIC, degree DT)
+Student::Student(string SID, string FN, string LN, string EMA, int SA, int* DIC, Degree DT)
 {
 	setSID(SID);
 	setFN(FN);
@@ -128,9 +128,9 @@ Student::~Student()
 
 }
 
-//Definition of the virtual "getDegreeProgram" from section D2.F 
-degree Student::getDegreeProgram()
-{
-	return SECURITY;
-}
 
+//Definition of the virtual "getDegreeProgram" from section D2.F 
+Degree Student::getDegreeProgram()
+{
+	return Degree();
+}

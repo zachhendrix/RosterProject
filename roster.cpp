@@ -30,7 +30,7 @@ int main()
 }
 
 
-void Roster::add(string SID, string FN, string LN, string EMA, int SA, int DIC1, int DIC2, int DIC3, degree degreeProgram)
+void Roster::add(string SID, string FN, string LN, string EMA, int SA, int DIC1, int DIC2, int DIC3, Degree degreeProgram)
 {
 	int courseDays[3] = { DIC1, DIC2,DIC3 };
 

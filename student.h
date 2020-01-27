@@ -11,7 +11,6 @@ using namespace std;
 class Student
 {
 
-//
 public:
 	//Declarations of getters or accessors for section D2.A 
 	string getSID();
@@ -20,7 +19,7 @@ public:
 	string getEMA();
 	int getSA();
 	int *getDIC();
-	degree getDegreeType();
+	Degree getDegreeType();
 
 
 	//Declarations of setters or mutators for section D2.B
@@ -30,11 +29,11 @@ public:
 	void setEMA(string);
 	void setSA(int);
 	void setDIC(int[3]);
-	void setDegreeType(degree);
+	void setDegreeType(Degree);
 
 
 	//Declaration of the constructor that uses all elements of the table for section D2.C
-	Student(string, string, string, string, int, int*, degree);
+	Student(string, string, string, string, int, int*, Degree);
 	
 
 	//Declaration of the virtual print to "print" specific student data for section D2.D
@@ -45,7 +44,7 @@ public:
 
 
 	//Declaration of the virtual "getDegreeProgram" from section D2.F 
-	virtual degree getDegreeProgram();
+	virtual Degree getDegreeProgram();
 
 
 //declaration of the variables in section D1
@@ -56,6 +55,6 @@ private:
 	string emailAddress;
 	int age;
 	int daysInCourse[3];
-	degree degreeType;
+	Degree degreeType;
 };
 #endif

@@ -3,7 +3,7 @@
 
 
 //Definition of the Network Student class that overrides the Get degree program function for section D3
-degree NetworkStudent::getDegreeProgram()
+Degree NetworkStudent::getDegreeProgram()
 {
 	return degreeType;
 }

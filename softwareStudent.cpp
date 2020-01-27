@@ -3,7 +3,7 @@
 
 
 //Definition of the Software Student class that overrides the Get degree program function for section D3
-degree SoftwareStudent::getDegreeProgram()
+Degree SoftwareStudent::getDegreeProgram()
 {
 	return degreeType;
 }
