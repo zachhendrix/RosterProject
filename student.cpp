@@ -74,9 +74,10 @@ void Student::setSA(int SA)
 
 void Student::setDIC(int *DIC)
 {
-	for (int i = 0; i < 3; i++) {
-		daysInCourse[i] = DIC[i];
-	}
+	daysInCourse[0] = DIC[0];
+	daysInCourse[1] = DIC[1];
+	daysInCourse[2] = DIC[2];
+
 }
 void Student::setDegreeType(Degree DT)
 {

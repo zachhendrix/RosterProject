@@ -1,2 +1,7 @@
-﻿  student.cpp
+﻿  networkStudent.cpp
+  roster.cpp
+  securityStudent.cpp
+  softwareStudent.cpp
+  student.cpp
+  Generating Code...
   RosterProject.vcxproj -> C:\Users\zach.hendrix.AD\Documents\GitHub\RosterProject\Debug\RosterProject.exe

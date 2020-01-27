@@ -14,7 +14,6 @@ int main()
 	cout << "Zach Hendrix \n\n";
 	Roster classRoster;
 
-
 	//The Student Data table specified in section A, including my personal information
 	const string studentData[] =
 	{
@@ -24,6 +23,8 @@ int main()
 		"A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
 		"A5,Zach,Hendrix,zhendr2@wgu.edu,27,30,30,30,SOFTWARE"
 	};
+
+
 
 
 

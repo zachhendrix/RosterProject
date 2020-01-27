@@ -23,7 +23,7 @@ public:
 
 
 	//Declarations of setters or mutators for section D2.B
-	void setSID(string);
+	void setSID(string );
 	void setFN(string);
 	void setLN(string);
 	void setEMA(string);
