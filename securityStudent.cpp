@@ -6,3 +6,8 @@ Degree SecurityStudent::getDegreeProgram()
 {
 	return degreeType;
 }
+
+void SecurityStudent::print()
+{
+	//FIXME: THIS DOES NOT MODEL THE SAMPLE, DO NOT MODEL THE SAMPLE PAY ATTENTION TO E3.C, IT TELLS YOU HOW TO CODE THIS FUNCTION.
+}
