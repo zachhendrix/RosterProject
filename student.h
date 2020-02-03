@@ -9,6 +9,18 @@ using namespace std;
 class Student
 {
 
+
+
+	//declaration of the variables in section D1
+private:
+	string studentID;
+	string firstName;
+	string lastName;
+	string emailAddress;
+	int age;
+	int daysInCourse[3];
+
+
 public:
 	//Declarations of getters or accessors for section D2.A 
 	string getSID();
@@ -42,13 +54,4 @@ public:
 	//Declaration of the virtual "getDegreeProgram" from section D2.F 
 	virtual Degree getDegreeProgram() = 0;
 
-
-//declaration of the variables in section D1
-private:
-	string studentID;
-	string firstName;
-	string lastName;
-	string emailAddress;
-	int age;
-	int daysInCourse[3];
 };

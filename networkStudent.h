@@ -5,13 +5,13 @@
 //Declaration of the Network Student class
 class NetworkStudent : public Student 
 {
-
 public:
-	virtual Degree getDegreeProgram();
+	Degree getDegreeProgram();
+	void print();
+
+	//FIXME: WATCH VIDEO TO FIGURE OUT CONSTRUCTOR WITH PARAMETERS.
 	using Student::Student;
 
 private:
-	Degree degreeType = NETWORK;
-
-
+	Degree degreeProgram;
 };

@@ -5,5 +5,9 @@
 //Definition of the Software Student class that overrides the Get degree program function for section D3
 Degree SoftwareStudent::getDegreeProgram()
 {
-	return degreeType;
+	return degreeProgram;
+}
+
+void SoftwareStudent::print()
+{
 }

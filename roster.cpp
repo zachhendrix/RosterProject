@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include "roster.h"
+#include "student.h"
 
 using namespace std;
 
@@ -24,7 +25,7 @@ int main()
 		"A5,Zach,Hendrix,zhendr2@wgu.edu,27,30,30,30,SOFTWARE"
 	};
 
-
+	void printAll();
 
 
 
@@ -37,11 +38,26 @@ void Roster::add(string SID, string FN, string LN, string EMA, int SA, int DIC1,
 
 }
 
+void Roster::remove(string StudentID)
+{
+}
 
+void Roster::printAll()
+{
 
+}
 
+void Roster::printAverageDaysInCourse(string StudentID)
+{
+}
 
+void Roster::printInvalidEmails()
+{
+}
 
+void Roster::printByDegreeProgram(Degree degreeProgram)
+{
+}
 
 
 Roster::~Roster()
