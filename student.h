@@ -32,11 +32,11 @@ public:
 
 
 	//Declarations of setters or mutators for section D2.B
-	void setSID(string SID);
-	void setFN(string FN);
-	void setLN(string LN);
-	void setEMA(string EMA);
-	void setSA(int SA);
+	void setSID(string);
+	void setFN(string);
+	void setLN(string);
+	void setEMA(string);
+	void setSA(int);
 	void setDIC(int*);
 
 

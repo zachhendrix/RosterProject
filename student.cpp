@@ -79,6 +79,11 @@ Student::Student(string SID, string FN, string LN, string EMA, int SA, int* DIC)
 {
 	//FIX ME: ALL ATTRIBUTES LIKE THIS
 	studentID = SID;
+	firstName = FN;
+	lastName = LN;
+	emailAddress = EMA;
+	age = SA;
+
 
 }
 
