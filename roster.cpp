@@ -36,6 +36,24 @@ void Roster::add(string SID, string FN, string LN, string EMA, int SA, int DIC1,
 {
 	int courseDays[3] = { DIC1, DIC2,DIC3 };
 
+	for (int i = 0; i < sizeof(classRosterArray) / sizeof(classRosterArray[i]); i++)
+	{
+		if (classRosterArray[i] == nullptr)
+		{
+			if (degreeProgram == NETWORK) {
+
+			}
+			else if (degreeProgram == SECURITY)
+			{
+
+			}
+			else if (degreeProgram == SOFTWARE)
+			{
+
+			}
+
+		}
+	}
 }
 
 void Roster::remove(string StudentID)
