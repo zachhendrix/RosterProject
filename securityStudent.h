@@ -6,6 +6,8 @@ class SecurityStudent : public Student
 {
 
 public:
+
+	SecurityStudent(string, string, string, string, int, int*, Degree);
 	Degree getDegreeProgram();
 	void print();
 

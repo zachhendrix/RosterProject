@@ -6,6 +6,8 @@
 class NetworkStudent : public Student 
 {
 public:
+
+	NetworkStudent(string, string, string, string, int, int*, Degree);
 	Degree getDegreeProgram();
 	void print();
 

@@ -13,7 +13,6 @@ int main()
 	cout << "C++ \n";
 	cout << "#001220147 \n";
 	cout << "Zach Hendrix \n\n";
-	Roster classRoster;
 
 	//The Student Data table specified in section A, including my personal information
 	const string studentData[] =
@@ -32,6 +31,7 @@ int main()
 		//Third step: pass parsed data to add
 	}
 
+	Roster classRoster;
 
 	//Required for section F4 
 
@@ -54,23 +54,20 @@ void Roster::add(string SID, string FN, string LN, string EMA, int SA, int DIC1,
 {
 	int courseDays[3] = { DIC1, DIC2,DIC3 };
 
-		//FIXME: Create constructors for the subclasses
-	/*
-		if (degreeProgram = SECURITY)
+		if (degreeProgram == SECURITY)
 		{
-			classRosterArray[addIndex++] = new SecurityStudent(SID,FN);
+			classRosterArray[addIndex++] = new SecurityStudent(SID, FN, LN, EMA, SA, courseDays, degreeProgram);
 		}
 
-		if (degreeProgram = NETWORK)
+		if (degreeProgram == NETWORK)
 		{
-			classRosterArray[addIndex++] = new NetworkStudent();
+			classRosterArray[addIndex++] = new NetworkStudent(SID, FN, LN, EMA, SA, courseDays, degreeProgram);
 		}
 
-		if (degreeProgram = SOFTWARE)
+		if (degreeProgram == SOFTWARE)
 		{
-			classRosterArray[addIndex++] = new SoftwareStudent();
+			classRosterArray[addIndex++] = new SoftwareStudent(SID, FN, LN, EMA, SA, courseDays, degreeProgram);
 		}
-		*/
 }
 
 void Roster::remove(string StudentID)

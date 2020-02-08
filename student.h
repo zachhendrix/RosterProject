@@ -9,8 +9,6 @@ using namespace std;
 class Student
 {
 
-
-
 	//declaration of the variables in section D1
 private:
 	string studentID;
