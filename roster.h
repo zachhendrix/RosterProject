@@ -28,6 +28,7 @@ public:
 private:
 	//Array of pointers to hold the data provided in the studentData table for section E1
 	Student* classRosterArray[5];
+	int addIndex = 0;
 
 
 };
