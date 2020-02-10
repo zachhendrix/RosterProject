@@ -27,18 +27,18 @@ int main()
 	Roster classRoster;
 	Degree degreeObj;
 
-	for(int i = 0; i<5; i++)
+	for(int i = 0; i < 5; i++)
 	{ 
 		string temp = studentData[i];
 		istringstream ss(temp);
 		string token;
 		string tempHolder[9];
 
-		int x = 0;
+		int j = 0;
 		while (getline(ss, token, ',')) 
 		{
-			tempHolder[x] = token;
-			x += 1;
+			tempHolder[j] = token;
+			j++;
 		}
 
 
@@ -47,12 +47,12 @@ int main()
 			degreeObj = SECURITY;
 		}
 
-		if (tempHolder[8] == "NETWORK") 
+		else if (tempHolder[8] == "NETWORK") 
 		{
 			degreeObj = NETWORK;
 		}
 
-		if (tempHolder[8] == "SOFTWARE")
+		else if (tempHolder[8] == "SOFTWARE")
 		{
 			degreeObj = SOFTWARE;
 		}
@@ -104,13 +104,7 @@ void Roster::remove(string StudentID)
 
 void Roster::printAll()
 {
-	cout << "Displaying roster:" << '\n';
-	cout << endl;
-	for (int i = 0; i < 5; i++) 
-	{
-		(*classRosterArray[i]).print();
-	}
-	cout << '\n';
+	cout << classRosterArray;
 }
 
 void Roster::printAverageDaysInCourse(string StudentID)
@@ -129,7 +123,5 @@ void Roster::printByDegreeProgram(Degree degreeProgram)
 
 Roster::~Roster()
 {
-	SecurityStudent;
-	NetworkStudent;
-	SoftwareStudent;
+
 }

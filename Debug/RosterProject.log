@@ -1,5 +1,2 @@
-﻿  roster.cpp
-C:\Users\zach.hendrix.AD\Documents\GitHub\RosterProject\roster.cpp(132): warning C4091: '': ignored on left of 'SecurityStudent' when no variable is declared
-C:\Users\zach.hendrix.AD\Documents\GitHub\RosterProject\roster.cpp(133): warning C4091: '': ignored on left of 'NetworkStudent' when no variable is declared
-C:\Users\zach.hendrix.AD\Documents\GitHub\RosterProject\roster.cpp(134): warning C4091: '': ignored on left of 'SoftwareStudent' when no variable is declared
+﻿  softwareStudent.cpp
   RosterProject.vcxproj -> C:\Users\zach.hendrix.AD\Documents\GitHub\RosterProject\Debug\RosterProject.exe
