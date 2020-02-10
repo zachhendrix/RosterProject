@@ -24,14 +24,42 @@ int main()
 		"A5,Zach,Hendrix,zhendr2@wgu.edu,27,30,30,30,SOFTWARE"
 	};
 
+	Roster classRoster;
+	Degree degreeObj;
+
 	for(int i = 0; i<5; i++)
 	{ 
 		string temp = studentData[i];
-		//Second step: parse temp 
-		//Third step: pass parsed data to add
+		istringstream ss(temp);
+		string token;
+		string tempHolder[9];
+
+		int x = 0;
+		while (getline(ss, token, ',')) 
+		{
+			tempHolder[x] = token;
+			x += 1;
+		}
+
+
+		if (tempHolder[8] == "SECURITY") 
+		{
+			degreeObj = SECURITY;
+		}
+
+		if (tempHolder[8] == "NETWORK") 
+		{
+			degreeObj = NETWORK;
+		}
+
+		if (tempHolder[8] == "SOFTWARE")
+		{
+			degreeObj = SOFTWARE;
+		}
+
+		classRoster.add(tempHolder[0], tempHolder[1], tempHolder[2], tempHolder[3], stoi(tempHolder[4]), stoi(tempHolder[5]), stoi(tempHolder[6]), stoi(tempHolder[7]), degreeObj);
 	}
 
-	Roster classRoster;
 
 	//Required for section F4 
 
@@ -76,7 +104,13 @@ void Roster::remove(string StudentID)
 
 void Roster::printAll()
 {
-
+	cout << "Displaying roster:" << '\n';
+	cout << endl;
+	for (int i = 0; i < 5; i++) 
+	{
+		(*classRosterArray[i]).print();
+	}
+	cout << '\n';
 }
 
 void Roster::printAverageDaysInCourse(string StudentID)
@@ -95,5 +129,7 @@ void Roster::printByDegreeProgram(Degree degreeProgram)
 
 Roster::~Roster()
 {
-
+	SecurityStudent;
+	NetworkStudent;
+	SoftwareStudent;
 }
