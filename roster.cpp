@@ -25,7 +25,7 @@ int main()
 	};
 
 	Roster classRoster;
-	Degree degreeObj;
+	Degree myDegree;
 
 	for(int i = 0; i < 5; i++)
 	{ 
@@ -44,20 +44,20 @@ int main()
 
 		if (tempHolder[8] == "SECURITY") 
 		{
-			degreeObj = SECURITY;
+			myDegree = SECURITY;
 		}
 
 		else if (tempHolder[8] == "NETWORK") 
 		{
-			degreeObj = NETWORK;
+			myDegree = NETWORK;
 		}
 
 		else if (tempHolder[8] == "SOFTWARE")
 		{
-			degreeObj = SOFTWARE;
+			myDegree = SOFTWARE;
 		}
 
-		classRoster.add(tempHolder[0], tempHolder[1], tempHolder[2], tempHolder[3], stoi(tempHolder[4]), stoi(tempHolder[5]), stoi(tempHolder[6]), stoi(tempHolder[7]), degreeObj);
+		classRoster.add(tempHolder[0], tempHolder[1], tempHolder[2], tempHolder[3], stoi(tempHolder[4]), stoi(tempHolder[5]), stoi(tempHolder[6]), stoi(tempHolder[7]), myDegree);
 	}
 
 

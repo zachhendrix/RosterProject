@@ -13,6 +13,6 @@ public:
 
 
 private:
-	Degree degreeProgram;
+	Degree degreeProgram = NETWORK;
 
 };

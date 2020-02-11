@@ -15,5 +15,7 @@ Degree SecurityStudent::getDegreeProgram()
 
 void SecurityStudent::print()
 {
-	//FIXME: THIS DOES NOT MODEL THE SAMPLE, DO NOT MODEL THE SAMPLE PAY ATTENTION TO E3.C, IT TELLS YOU HOW TO CODE THIS FUNCTION.
+	cout << "\t" << "First Name: " << getFN() << "\t" << "Last Name: " << getLN() << "\t" << "Age: " << getSA()
+		<< "\t" << "Days In Course: "; cout << getDIC()[0] << ", " << getDIC()[1] << ", " << getDIC()[2];
+	cout << " Degree Program: Security" << '\n';
 }
