@@ -104,7 +104,13 @@ void Roster::remove(string StudentID)
 
 void Roster::printAll()
 {
-	cout << classRosterArray;
+	cout << "Displaying roster:" << '\n';
+	cout << endl;
+	for (int i = 0; i < 5; i++) 
+	{
+		(*classRosterArray[i]).print();
+	}
+	cout << '\n';
 }
 
 void Roster::printAverageDaysInCourse(string StudentID)
