@@ -16,7 +16,10 @@ Degree SoftwareStudent::getDegreeProgram()
 
 void SoftwareStudent::print()
 {
-	cout << "\t" << "First Name: " << getFN() << "\t" << "Last Name: " << getLN() << "\t" << "Age: " << getSA()
-		<< "\t" << "Days In Course: "; cout << getDIC()[0] << ", " << getDIC()[1] << ", " << getDIC()[2];
+	cout << getSID() << "\t" 
+		<< "First Name: " << getFN() << "\t" 
+		<< "Last Name: " << getLN() << "\t" 
+		<< "Age: " << getSA()<< "\t" 
+		<< "Days In Course: "; cout << getDIC()[0] << ", " << getDIC()[1] << ", " << getDIC()[2];
 	cout << " Degree Program: Software" << '\n';
 }

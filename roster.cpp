@@ -68,6 +68,9 @@ int main()
 
 	classRoster.printInvalidEmails();
 
+
+	classRoster.remove("A3");
+	classRoster.remove("A3");
 	/*
 	//loop through classRosterArray and for each element:
 	classRoster.printAverageDaysInCourse(current_object's student id);
@@ -100,7 +103,26 @@ void Roster::add(string SID, string FN, string LN, string EMA, int SA, int DIC1,
 
 void Roster::remove(string StudentID)
 {
-}
+
+	bool valueFound = false;
+	for (int i = 0; i < 5; i++)
+	{
+		if (classRosterArray[i] != nullptr && classRosterArray[i]->getSID() == StudentID)
+		{
+			classRosterArray[i] = nullptr;
+			valueFound = true;
+			break;
+		}
+	}
+		
+	if (valueFound == false)	
+	{	
+		cout << "No Student with the ID " << StudentID << " was found in the roster." << endl;
+	}
+
+
+	
+};
 
 void Roster::printAll()
 {
