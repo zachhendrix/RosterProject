@@ -83,7 +83,10 @@ Student::Student(string SID, string FN, string LN, string EMA, int SA, int* DIC)
 	lastName = LN;
 	emailAddress = EMA;
 	age = SA;
-	daysInCourse[2] = *DIC;
+	daysInCourse[0] = DIC[0];
+	daysInCourse[1] = DIC[1];
+	daysInCourse[2] = DIC[2];
+
 
 }
 
