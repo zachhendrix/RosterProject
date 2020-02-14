@@ -76,7 +76,7 @@ int main()
 
 }
 
-//Adds each of the tokenized strings into the classRosterArray for section E2.b
+//Adds each of the tokenized strings into the classRosterArray for section E2.A
 //Defines the add function for section E3.A
 void Roster::add(string SID, string FN, string LN, string EMA, int SA, int DIC1, int DIC2, int DIC3, Degree degreeProgram)
 {
@@ -143,9 +143,9 @@ void Roster::printAverageDaysInCourse(string StudentID)
 	{
 		if ((*classRosterArray[i]).getSID() == StudentID) 
 		{
-			int avg = 0;
-			avg = ((*classRosterArray[i]).getDIC()[0] + (*classRosterArray[i]).getDIC()[1]+ (*classRosterArray[i]).getDIC()[2]) / 3;
-			cout << "The average days it took for student: " << StudentID << " to finish 3 courses is: " << avg << '\n';
+			int average = 0;
+			average = ((*classRosterArray[i]).getDIC()[0] + (*classRosterArray[i]).getDIC()[1]+ (*classRosterArray[i]).getDIC()[2]) / 3;
+			cout << "The average days it took for student: " << StudentID << " to finish 3 courses is: " << average << '\n';
 		}
 	}
 	cout << '\n';

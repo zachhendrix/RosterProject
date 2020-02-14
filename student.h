@@ -39,7 +39,8 @@ public:
 
 
 	//Declaration of the constructor that uses all elements of the table for section D2.C
-	Student(string, string, string, string, int, int*);
+	//Full constructor including Degree program initialization as mention in "Common Fail Points"
+	Student(string, string, string, string, int, int*, Degree);
 	
 
 	//Declaration of the virtual print to "print" specific student data for section D2.D

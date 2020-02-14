@@ -3,7 +3,7 @@
 
 
 
-NetworkStudent::NetworkStudent(string SID, string FN, string LN, string EMA, int SA, int* DIC, Degree DEG) : Student(SID, FN, LN, EMA, SA, DIC)
+NetworkStudent::NetworkStudent(string SID, string FN, string LN, string EMA, int SA, int* DIC, Degree DEG) : Student(SID, FN, LN, EMA, SA, DIC, DEG)
 {
 	degreeProgram = DEG;
 }

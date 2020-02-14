@@ -75,9 +75,8 @@ void Student::setDIC(int *DIC)
 }
 
 //Definition of the constructor that uses all elements of the table for section D2.C
-Student::Student(string SID, string FN, string LN, string EMA, int SA, int* DIC)
+Student::Student(string SID, string FN, string LN, string EMA, int SA, int* DIC, Degree DEG)
 {
-
 	studentID = SID;
 	firstName = FN;
 	lastName = LN;
