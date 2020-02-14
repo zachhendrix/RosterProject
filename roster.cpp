@@ -67,17 +67,12 @@ int main()
 
 
 	classRoster.printInvalidEmails();
-
-
-	classRoster.remove("A3");
-	classRoster.remove("A3");
-	/*
-	//loop through classRosterArray and for each element:
-	classRoster.printAverageDaysInCourse(current_object's student id);
+	classRoster.printAverageDaysInCourse("A5");
 	classRoster.printByDegreeProgram(SOFTWARE);
+	classRoster.printByDegreeProgram(SECURITY);
+	classRoster.printByDegreeProgram(NETWORK);
 	classRoster.remove("A3");
 	classRoster.remove("A3");
-	*/
 }
 
 
@@ -137,15 +132,76 @@ void Roster::printAll()
 
 void Roster::printAverageDaysInCourse(string StudentID)
 {
-	
+	for (int i = 0; i < 5; i++) 
+	{
+		if ((*classRosterArray[i]).getSID() == StudentID) 
+		{
+			int avg = 0;
+			avg = ((*classRosterArray[i]).getDIC()[0] + (*classRosterArray[i]).getDIC()[1]+ (*classRosterArray[i]).getDIC()[2]) / 3;
+			cout << "The average days it took for student: " << StudentID << " to finish 3 courses is: " << avg << '\n';
+		}
+	}
+	cout << '\n';
+
 }
 
 void Roster::printInvalidEmails()
 {
+	cout << "The following emails are invalid:" << '\n';
+	cout << endl;
+	for (int i = 0; i < 5; i++) {
+		bool foundCharAt = false;
+		bool foundCharPeriod = false;
+		bool foundCharSpace = false;
+		string email = "";
+		email = (*classRosterArray[i]).getEMA();
+		for (char& c : email) {
+			if (c == '@') {
+				foundCharAt = true;
+			}
+			if (c == '.') {
+				foundCharPeriod = true;
+			}
+			if (c == ' ') {
+				foundCharSpace = true;
+			}
+		}
+		if (foundCharAt == false || foundCharPeriod == false || foundCharSpace == true) {
+			cout << (*classRosterArray[i]).getEMA() << '\n';
+		}
+	}
+	cout << '\n';
 }
 
 void Roster::printByDegreeProgram(Degree degreeProgram)
 {
+	Degree degreeVal;
+	if (degreeProgram == SECURITY) 
+	{
+		cout << "Displaying students in the Security degree: " << endl;
+		degreeVal = SECURITY;
+	}
+
+	if (degreeProgram == NETWORK) 
+	{
+		cout << "Displaying students in the Networking degree: " << endl;
+		degreeVal = NETWORK;
+	}
+
+	if (degreeProgram == SOFTWARE) 
+	{
+		cout << "Displaying students in the Software degree: " << endl;
+		degreeVal = SOFTWARE;
+	}
+	cout << endl;
+
+	for (int i = 0; i < 5; i++) {
+		if (degreeVal == (*classRosterArray[i]).getDegreeProgram()) 
+		{
+			(*classRosterArray[i]).print();
+		}
+	}
+	cout << '\n';
 }
 
 
