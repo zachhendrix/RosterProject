@@ -16,6 +16,8 @@ private:
 
 public:
 
+	Student** getClassRosterArray();
+
 	void add(string SID, string FN, string LN, string EMA, int SA, int DIC1, int DIC2, int DIC3, Degree degreeProgram);
 
 	void remove(string StudentID);

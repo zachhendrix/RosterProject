@@ -90,7 +90,7 @@ Student::Student(string SID, string FN, string LN, string EMA, int SA, int* DIC,
 }
 
 
-//Definition of the virtual print to "print" specific student data for section D2.D
+
 
 
 //Definition of the deconstructor from section D2.E
@@ -100,4 +100,3 @@ Student::~Student()
 }
 
 
-//Definition of the virtual "getDegreeProgram" from section D2.F 

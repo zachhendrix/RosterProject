@@ -67,13 +67,21 @@ int main()
 	//Required for section F4 
 	classRoster.printAll();
 	classRoster.printInvalidEmails();
-	classRoster.printAverageDaysInCourse("A5");
+	//Needs to be "Current objects" 
+	//FIXME: LOOP 
+	for (int i = 0; i < 5; i++)
+	{
+		classRoster.printAverageDaysInCourse(classRoster.getClassRosterArray()[i]->getSID());
+	}
 	classRoster.printByDegreeProgram(SOFTWARE);
-	classRoster.printByDegreeProgram(SECURITY);
-	classRoster.printByDegreeProgram(NETWORK);
 	classRoster.remove("A3");
 	classRoster.remove("A3");
+	classRoster.~Roster();
+}
 
+Student** Roster::getClassRosterArray()
+{
+	return classRosterArray;
 }
 
 //Adds each of the tokenized strings into the classRosterArray for section E2.A
@@ -106,8 +114,11 @@ void Roster::remove(string StudentID)
 	bool valueFound = false;
 	for (int i = 0; i < 5; i++)
 	{
+		//FIXME: first check for null pointer and then only if it is null do the stuff we need to do.
 		if (classRosterArray[i] != nullptr && classRosterArray[i]->getSID() == StudentID)
 		{
+			//FIXEME: Need to nest these if statements
+			delete classRosterArray[i];
 			classRosterArray[i] = nullptr;
 			valueFound = true;
 			break;
@@ -145,7 +156,7 @@ void Roster::printAverageDaysInCourse(string StudentID)
 		{
 			int average = 0;
 			average = ((*classRosterArray[i]).getDIC()[0] + (*classRosterArray[i]).getDIC()[1]+ (*classRosterArray[i]).getDIC()[2]) / 3;
-			cout << "The average days it took for student: " << StudentID << " to finish 3 courses is: " << average << '\n';
+			cout << "The average days it took for student " << StudentID << " to finish 3 courses is: " << average << '\n';
 		}
 	}
 	cout << '\n';
@@ -162,8 +173,7 @@ void Roster::printInvalidEmails()
 		bool hasAtChar = false;
 		bool hasPeriodChar = false;
 		bool hasSpaceChar = false;
-		string emailString;
-		emailString = (*classRosterArray[i]).getEMA();
+		string emailString = (*classRosterArray[i]).getEMA();
 
 		for (char charVal : emailString) 
 		{
@@ -225,7 +235,17 @@ void Roster::printByDegreeProgram(int degreeProgram)
 	cout << '\n';
 }
 
+//FIXME: new and delete 
 Roster::~Roster()
 {
-
+	for (int i = 0; i < 5; i++)
+	{
+		//FIXME: first check for null pointer and then only if it is null do the stuff we need to do.
+		if (classRosterArray[i] != nullptr)
+		{
+			//FIXEME: Need to nest these if statements
+			delete classRosterArray[i];
+			classRosterArray[i] = nullptr;
+		}
+	}
 }
